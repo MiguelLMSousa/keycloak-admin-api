@@ -1,0 +1,11 @@
+meta {
+  name: DeleteAllClonedAuthFlows
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/authflows
+  body: none
+  auth: inherit
+}

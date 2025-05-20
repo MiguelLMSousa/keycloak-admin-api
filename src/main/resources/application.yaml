@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: keycloak-admin-api
+server:
+  port: 8080
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+keycloak:
+  url: ${KEYCLOAK_URL:http://0.0.0.0:9090}
+  url-management: ${KEYCLOAK_URL_MANAGEMENT:http://0.0.0.0:9000}
+  realm: test
+  username: admin
+  password: admin
+  clientId: admin-cli
+
+
